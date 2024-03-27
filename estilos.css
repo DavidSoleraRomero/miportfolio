@@ -63,7 +63,7 @@ body {
 
 #hero {
     background-color: #080808;
-    height: 75vh;
+    height: 80vh;
     margin-bottom: 6.25%;
     position: relative;
     border-bottom: 1px solid white;}
@@ -74,14 +74,14 @@ body {
     position: absolute;
     width: 25.25%;
     border-bottom: 1px solid white;
-    bottom: 50%;}
+    bottom: 35%;}
 
 #linea-dos {
     position: absolute;
     width: 25.25%;
     border-bottom: 1px solid white;
     right: 0%;
-    bottom: 50%;}
+    bottom: 35%;}
 
 #hero .button {
     height: 50px;
@@ -94,7 +94,7 @@ body {
     border-radius: 30px;
     color: #333;
     transition: all 0.5s ease-in-out;
-    bottom: 25.5%;
+    bottom: 15%;
     left: 50%;
     transform: translateX(-50%);}
 
@@ -128,3 +128,16 @@ body {
 /* Secciones */
 
 /* Biografía */
+
+
+/* Media Queries */
+
+@media only screen and (max-width: 990px) {
+    #logo {display: none;}
+    .nav-link {padding-left: 2.75%;}
+    #linea-uno, #linea-dos {width: 17.5%;}
+}
+
+@media only screen and (max-height: 705px) {
+    #hero .button {bottom: 10%;} 
+    }
