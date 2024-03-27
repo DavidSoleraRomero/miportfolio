@@ -1,0 +1,130 @@
+/*           estilos.css             */
+/*      Hoja de estilos para el      */
+/*  portfolio de David Solera Romero */
+
+/* Fuentes */
+
+@font-face {
+    font-family: titulo;
+    src: url("./fonts/HenriDidot.otf");
+}
+
+@font-face {
+    font-family: texto;
+    src: url("./fonts/Aspergit.otf");
+}
+
+/* Estilado general */
+
+* {
+    box-sizing: border-box;
+    color: #e6e6e6;
+}
+
+h1, h2, button {
+    font-family: titulo; 
+    text-align: center;}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #080808;}
+
+/* Estilado de la barra de navegación */
+
+.navbar {
+    background: #0b0b0b; 
+    align-items: center; 
+    position: sticky; 
+    top: 0;
+    z-index: 2;
+    border-bottom: 1px ridge white;}
+
+.navbar .container-fluid {position: relative;}
+.nav-link, .navbar-text, .navbar-brand {color: #e6e6e6 !important;}
+.nav-link, .navbar-brand {font-family: texto;}
+.nav-link {border-radius: 32.5%;}
+.navbar-brand {font-family: titulo;}
+
+.navbar-brand:hover, .nav-link:hover {
+    text-shadow: 0 0 30px white;
+    color: black;
+    background-color: #101010;
+    transition: 1.25s;}
+
+#logo {
+    width: 80px;
+    position: absolute;
+    top: 3.25px;
+    right: 9px;
+    cursor: pointer;}
+
+/* Estilado de la hero section */
+
+#hero {
+    background-color: #080808;
+    height: 75vh;
+    margin-bottom: 6.25%;
+    position: relative;
+    border-bottom: 1px solid white;}
+
+#hero h1 {color: #ffffff;}
+
+#linea-uno {
+    position: absolute;
+    width: 25.25%;
+    border-bottom: 1px solid white;
+    bottom: 50%;}
+
+#linea-dos {
+    position: absolute;
+    width: 25.25%;
+    border-bottom: 1px solid white;
+    right: 0%;
+    bottom: 50%;}
+
+#hero .button {
+    height: 50px;
+    width: 200px;
+    position: absolute;
+    background-color: transparent;
+    cursor: pointer;
+    border: 2px solid #343434;
+    overflow: hidden;
+    border-radius: 30px;
+    color: #333;
+    transition: all 0.5s ease-in-out;
+    bottom: 25.5%;
+    left: 50%;
+    transform: translateX(-50%);}
+
+.btn-txt {
+    z-index: 1;
+    font-weight: 750;
+    letter-spacing: 4.5px;}
+
+.type1::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: all 1.25s;
+    background-color: #7f7f7f;
+    border-radius: 30px;
+    visibility: hidden;
+    height: 10px;
+    width: 10px;
+    z-index: -1;}
+
+.button:hover {
+    box-shadow: 1.25px 1.25px 225px #9a9a9a;
+    color: #fff;
+    border: none;}
+
+.type1:hover::after {
+    visibility: visible;
+    transform: scale(100) translateX(2px);}
+
+/* Secciones */
+
+/* Biografía */
