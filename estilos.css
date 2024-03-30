@@ -195,7 +195,7 @@ body {
 #steampunk:hover, #ai:hover, #pixelart:hover {transition: 1.2s;}
 #ai:hover {filter: drop-shadow(0 0 50px #51b1bb);}
 #steampunk:hover {filter: drop-shadow(0 0 50px #fbcf78);}
-#pixelart:hover {filter: drop-shadow(0 0 50px #59C05A);}
+#pixelart:hover {filter: drop-shadow(0 0 50px #74ef76);}
 
 .letra-steampunk {font-family: steampunk;}
 .color-steampunk {
@@ -216,12 +216,38 @@ body {
     color: transparent; -webkit-text-fill-color: transparent;
     -webkit-text-stroke: 2.1px rgb(2, 12, 2);}
 .fondo-pixel-art {
-    border: 3px solid #2a9e60;
-    background: linear-gradient(37deg, rgba(155, 237, 108, 0.25) 0%, rgba(72, 172, 9, 0.4) 80%);
-    background: -webkit-linear-gradient(37deg, rgba(155, 237, 108, 0.25) 0%, rgba(72, 172, 9, 0.4) 80%);
-    background: -moz-linear-gradient(37deg, rgba(155, 237, 108, 0.25) 0%, rgba(72, 172, 9, 0.4) 80%);
-    box-shadow: 0 0 12.5px 2.5px #2a9e60;
+    border: 3px solid #b4df51;
+    background: linear-gradient(37deg, rgba(182, 237, 150, 0.25) 0%, rgba(93, 223, 12, 0.4) 80%);
+    background: -webkit-linear-gradient(37deg, rgba(182, 237, 150, 0.25) 0%, rgba(93, 223, 12, 0.4) 80%);
+    background: -moz-linear-gradient(37deg, rgba(182, 237, 150, 0.25) 0%, rgba(93, 223, 12, 0.4) 80%);
+    box-shadow: 0 0 12.5px 2.5px #b4df51;
 }
+
+/* Contacto */
+
+.red {
+    padding-top: 3px;
+    padding-bottom: 3px;}
+
+.red:hover {
+    border-bottom: 1px solid white;
+    text-shadow: 0 0 25px white;
+    border-radius: 20%;
+    transition: 2s;}
+
+#ultimaimg {
+    padding-right: 19px; 
+    overflow: hidden;}
+
+#ultimaimg:hover, #logo:hover {
+    filter: drop-shadow(0 0 15px #e1e1e1);
+    transition: 1.5s;}
+
+#ultimaimg:hover {
+    cursor: pointer;
+    border-right: 1px solid white;
+    border-left: 1px solid white;
+    border-radius: 20%;}
 
 /* Media Queries */
 
