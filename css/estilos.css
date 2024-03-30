@@ -1,0 +1,308 @@
+/*           estilos.css             */
+/*      Hoja de estilos para el      */
+/*  portfolio de David Solera Romero */
+
+/* Fuentes */
+
+@font-face {
+    font-family: titulo;
+    src: url("./fonts/HenriDidot.otf");
+}
+
+@font-face {
+    font-family: texto;
+    src: url("./fonts/Aspergit.otf");
+}
+
+@font-face {
+    font-family: steampunk;
+    src: url("./fonts/Steampunk.ttf");
+}
+
+@font-face {
+    font-family: pixelart;
+    src: url("./fonts/Pixel-Art.ttf");
+}
+
+@font-face {
+    font-family: ia;
+    src: url("./fonts/Artificial-Intelligence.otf");
+}
+
+/* Estilado general */
+
+* {
+    box-sizing: border-box;
+    color: #e6e6e6;}
+
+h1, h2, button {font-family: titulo;}
+h1:not(#hero #titulo h1), h2:not(#hero #titulo h2), button {text-align: center;}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #080808;}
+
+.texto {font-family: texto;}
+.titulo {font-family: titulo;}
+
+.text-justify {text-align: justify;}
+
+.w-5 {width: 5%;}
+.w-10 {width: 10%;}
+.w-15 {width: 15%;}
+.w-20 {width: 20%;}
+.w-30 {width: 30%;}
+.w-35 {width: 35%;}
+.w-40 {width: 40%;}
+.w-45 {width: 45%;}
+.w-55 {width: 55%;}
+.w-60 {width: 60%;}
+.w-65 {width: 65%;}
+.w-70 {width: 70%;}
+.w-775 {width: 77.5%;}
+.w-80 {width: 80%;}
+.w-85 {width: 85%;}
+.w-95 {width: 95%;}
+
+.content {
+    opacity: 0;
+    transition: opacity 1.25s ease, transform 1.075s ease;
+    transform: translateY(75px); /* Empieza 100px abajo */}
+
+.content.show {
+    opacity: 1; 
+    transform: translateY(0); /* Lleva el elemento a su posición original */}
+
+/* Estilado de la barra de navegación */
+
+.navbar {
+    background: #0b0b0b; 
+    align-items: center; 
+    position: sticky; 
+    top: 0;
+    z-index: 2;
+    border-bottom: 1px ridge white;}
+
+.navbar .container-fluid {position: relative;}
+.nav-link, .navbar-text, .navbar-brand {color: #e6e6e6 !important;}
+.nav-link, .navbar-brand {font-family: texto; transition: 0.75s;}
+.nav-link {border-radius: 32.5%;}
+.navbar-brand {font-family: titulo;}
+
+.navbar-brand:hover, .nav-link:hover {
+    text-shadow: 0 0 30px white;
+    color: black;
+    background-color: #101010;
+    transition: 1.25s;}
+
+#logo {
+    width: 80px;
+    position: absolute;
+    top: 3.25px;
+    right: 9px;
+    cursor: pointer;}
+
+/* Estilado de la hero section */
+
+#hero {
+    background-color: #080808;
+    height: 80vh;
+    margin-bottom: 6.25%;
+    position: relative;
+    border-bottom: 2.5px solid white;}
+
+#hero #titulo h1, #hero #titulo h2 {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);}
+
+#hero #titulo h1 {
+    color: #ffffff;
+    top: 12.5%;
+    text-align: center;}
+
+#hero #titulo h2 {top: 30%;}
+
+#linea-uno {
+    position: absolute;
+    border-bottom: 1px solid white;
+    bottom: 35%;
+    animation: increaseWidth 4s ease-out forwards;
+    animation-iteration-count: 1;}
+
+#linea-dos {
+    position: absolute;
+    border-bottom: 1px solid white;
+    right: 0%;
+    bottom: 35%;
+    animation: increaseWidth 4s ease-out forwards;
+    animation-iteration-count: 1;}
+
+@keyframes increaseWidth {
+    0% {
+        width: 0%; /* Ancho inicial */
+    }
+    100% {
+        width: 25.125%;
+    }
+}
+
+#nombre {    
+    animation: decreaseShadow 3.25s ease-in forwards;
+    animation-iteration-count: 1;}
+
+@keyframes decreaseShadow {
+    0% {
+        text-shadow: 0 0 12.5px white;
+    }
+    100% {
+        text-shadow: 0 0 0px white;
+    }
+}
+
+#hero .button {
+    height: 50px;
+    width: 200px;
+    position: absolute;
+    background-color: transparent;
+    cursor: pointer;
+    border: 2px solid #343434;
+    overflow: hidden;
+    border-radius: 30px;
+    color: #333;
+    transition: all 0.5s ease-in-out;
+    bottom: 15%;
+    left: 50%;
+    transform: translateX(-50%);}
+
+.btn-txt {
+    z-index: 1;
+    font-weight: 750;
+    letter-spacing: 4.5px;}
+
+.type1::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: all 1.25s;
+    background-color: #7f7f7f;
+    border-radius: 30px;
+    visibility: hidden;
+    height: 10px;
+    width: 10px;
+    z-index: -1;}
+
+.button:hover {
+    box-shadow: 1.25px 1.25px 225px #9a9a9a;
+    color: #fff;
+    border: none;}
+
+.type1:hover::after {
+    visibility: visible;
+    transform: scale(100) translateX(2px);}
+
+/* Secciones */
+
+/* Biografía */
+
+#selfie {
+    border-radius: 50%;
+    border: 1.25px solid white;}
+
+#biografia .container {font-family: texto;}
+
+/* Proyectos */
+
+#ai {border-radius: 50%;}
+
+.p-proyectos {
+    padding: 50px 35px;
+    align-items: center;
+    font-size: 22.5px;
+    text-align: justify;
+    border-radius: 30px;}
+
+.letra-ia {font-family: ia;}
+.color-ia {color: #DBF7FD;}
+.fondo-ia {
+    border: 3px solid #DBF7FD;;
+    background: #a6c0e9;
+    background: linear-gradient(37deg, rgba(174, 201, 243, 0.25) 0%, rgba(46, 143, 255, 0.2) 80%);
+    background: -webkit-linear-gradient(37deg, rgba(174, 201, 243, 0.25) 0%, rgba(46, 143, 255, 0.2) 80%);
+    background: -moz-linear-gradient(37deg, rgba(174, 201, 243, 0.25) 0%, rgba(46, 143, 255, 0.2) 80%);
+    box-shadow: 0 0 12px 2px #a6c0e9;}
+
+#steampunk, #ai, #pixelart {transition: 0.9s;}
+#steampunk:hover, #ai:hover, #pixelart:hover {transition: 1.2s;}
+#ai:hover {filter: drop-shadow(0 0 50px #51b1bb);}
+#steampunk:hover {filter: drop-shadow(0 0 50px #fbcf78);}
+#pixelart:hover {filter: drop-shadow(0 0 50px #74ef76);}
+
+.letra-steampunk {font-family: steampunk;}
+.color-steampunk {
+    color: #FDDB9A;
+    text-shadow: 3.25px 2.25px 1px black;}
+.fondo-steampunk {
+    border: 3px solid #e0cd92;
+    background: linear-gradient(37deg, rgba(237, 230, 149, 0.275) 0%, rgba(226, 191, 77, 0.4) 80%);
+    background: -webkit-linear-gradient(37deg, rgba(237, 230, 149, 0.275) 0%, rgba(226, 191, 77, 0.4) 80%);
+    background: -moz-linear-gradient(37deg, rgba(237, 230, 149, 0.275) 0%, rgba(226, 191, 77, 0.4) 80%);
+    box-shadow: 0 0 12px 2px #e0cd92;
+}
+
+.letra-pixel-art {font-family: pixelart;}
+.color-pixel-art {
+    background: linear-gradient(90deg,#88ff00 10%, #9dc034 50%, #60a303 100%);
+    background-clip: text; -webkit-background-clip: text;
+    color: transparent; -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 2.1px rgb(2, 12, 2);}
+.fondo-pixel-art {
+    border: 3px solid #b4df51;
+    background: linear-gradient(37deg, rgba(182, 237, 150, 0.25) 0%, rgba(93, 223, 12, 0.4) 80%);
+    background: -webkit-linear-gradient(37deg, rgba(182, 237, 150, 0.25) 0%, rgba(93, 223, 12, 0.4) 80%);
+    background: -moz-linear-gradient(37deg, rgba(182, 237, 150, 0.25) 0%, rgba(93, 223, 12, 0.4) 80%);
+    box-shadow: 0 0 12.5px 2.5px #b4df51;
+}
+
+/* Contacto */
+
+.red {
+    padding-top: 3px;
+    padding-bottom: 3px;
+    border-bottom: 1px solid white;
+    transition: 1.25s;}
+
+.red:hover {
+    text-shadow: 0 0 25px white;
+    border-radius: 20%;
+    transition: 1.75s;}
+
+.ultimaimg, #logo {transition: 1s;}
+
+.ultimaimg {
+    padding-right: 19px; 
+    overflow: hidden;
+    border-right: 1px solid white;
+    border-left: 1px solid white;
+    border-radius: 2.5%;}
+
+.ultimaimg:hover, #logo:hover {
+    filter: drop-shadow(0 0 15px #e1e1e1);
+    transition: 1.75s;}
+
+.ultimaimg:hover {
+    cursor: pointer;
+    border-radius: 20%;}
+
+/* Media Queries */
+
+@media only screen and (max-width: 990px) {
+    #logo {display: none;}
+    #linea-uno, #linea-dos {width: 17.5%;}
+}
+
+@media only screen and (max-height: 705px) {
+    #hero .button {bottom: 10%;} 
+    }
