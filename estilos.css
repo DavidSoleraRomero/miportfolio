@@ -78,7 +78,7 @@ body {
 
 .navbar .container-fluid {position: relative;}
 .nav-link, .navbar-text, .navbar-brand {color: #e6e6e6 !important;}
-.nav-link, .navbar-brand {font-family: texto;}
+.nav-link, .navbar-brand {font-family: texto; transition: 0.75s;}
 .nav-link {border-radius: 32.5%;}
 .navbar-brand {font-family: titulo;}
 
@@ -192,6 +192,7 @@ body {
     background: -moz-linear-gradient(37deg, rgba(174, 201, 243, 0.25) 0%, rgba(46, 143, 255, 0.2) 80%);
     box-shadow: 0 0 12px 2px #a6c0e9;}
 
+#steampunk, #ai, #pixelart {transition: 0.9s;}
 #steampunk:hover, #ai:hover, #pixelart:hover {transition: 1.2s;}
 #ai:hover {filter: drop-shadow(0 0 50px #51b1bb);}
 #steampunk:hover {filter: drop-shadow(0 0 50px #fbcf78);}
@@ -227,26 +228,30 @@ body {
 
 .red {
     padding-top: 3px;
-    padding-bottom: 3px;}
+    padding-bottom: 3px;
+    border-bottom: 1px solid white;
+    transition: 1.25s;}
 
 .red:hover {
-    border-bottom: 1px solid white;
     text-shadow: 0 0 25px white;
     border-radius: 20%;
-    transition: 2s;}
+    transition: 1.75s;}
 
-#ultimaimg {
+.ultimaimg, #logo {transition: 1s;}
+
+.ultimaimg {
     padding-right: 19px; 
-    overflow: hidden;}
-
-#ultimaimg:hover, #logo:hover {
-    filter: drop-shadow(0 0 15px #e1e1e1);
-    transition: 1.5s;}
-
-#ultimaimg:hover {
-    cursor: pointer;
+    overflow: hidden;
     border-right: 1px solid white;
     border-left: 1px solid white;
+    border-radius: 2.5%;}
+
+.ultimaimg:hover, #logo:hover {
+    filter: drop-shadow(0 0 15px #e1e1e1);
+    transition: 1.75s;}
+
+.ultimaimg:hover {
+    cursor: pointer;
     border-radius: 20%;}
 
 /* Media Queries */
