@@ -66,6 +66,15 @@ body {
 .w-85 {width: 85%;}
 .w-95 {width: 95%;}
 
+.content {
+    opacity: 0;
+    transition: opacity 1.25s ease, transform 1.075s ease;
+    transform: translateY(75px); /* Empieza 100px abajo */}
+
+.content.show {
+    opacity: 1; 
+    transform: translateY(0); /* Lleva el elemento a su posición original */}
+
 /* Estilado de la barra de navegación */
 
 .navbar {
@@ -108,16 +117,40 @@ body {
 
 #linea-uno {
     position: absolute;
-    width: 25.25%;
     border-bottom: 1px solid white;
-    bottom: 35%;}
+    bottom: 35%;
+    animation: increaseWidth 4s ease-out forwards;
+    animation-iteration-count: 1;}
 
 #linea-dos {
     position: absolute;
-    width: 25.25%;
     border-bottom: 1px solid white;
     right: 0%;
-    bottom: 35%;}
+    bottom: 35%;
+    animation: increaseWidth 4s ease-out forwards;
+    animation-iteration-count: 1;}
+
+@keyframes increaseWidth {
+    0% {
+        width: 0%; /* Ancho inicial */
+    }
+    100% {
+        width: 25.125%;
+    }
+}
+
+#nombre {    
+    animation: decreaseShadow 3.25s ease-in forwards;
+    animation-iteration-count: 1;}
+
+@keyframes decreaseShadow {
+    0% {
+        text-shadow: 0 0 12.5px white;
+    }
+    100% {
+        text-shadow: 0 0 0px white;
+    }
+}
 
 #hero .button {
     height: 50px;
