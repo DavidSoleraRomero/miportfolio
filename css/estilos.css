@@ -6,27 +6,27 @@
 
 @font-face {
     font-family: titulo;
-    src: url("./fonts/HenriDidot.otf");
+    src: url("../fonts/HenriDidot.otf");
 }
 
 @font-face {
     font-family: texto;
-    src: url("./fonts/Aspergit.otf");
+    src: url("../fonts/Aspergit.otf");
 }
 
 @font-face {
     font-family: steampunk;
-    src: url("./fonts/Steampunk.ttf");
+    src: url("../fonts/Steampunk.ttf");
 }
 
 @font-face {
     font-family: pixelart;
-    src: url("./fonts/Pixel-Art.ttf");
+    src: url("../fonts/Pixel-Art.ttf");
 }
 
 @font-face {
     font-family: ia;
-    src: url("./fonts/Artificial-Intelligence.otf");
+    src: url("../fonts/Artificial-Intelligence.otf");
 }
 
 /* Estilado general */
